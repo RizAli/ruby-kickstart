@@ -9,21 +9,48 @@
 
 def odds_and_evens(string, return_odds)
 	newString = ""
-	index = 0
+	index = 1
 	letters = string.split("").each do |letter|
-		if index.even? && return_odds == false
-			#puts index
-			newString << letter
-		end
 		if index.odd? && return_odds == true
 			#puts index
 			newString << letter
+		elsif 
+			index.even? && return_odds == false
+			#puts index
+			newString << letter
 			#print letter
+		
+		# elsif return_odds == false
+		# 	index.even?
+		# 	puts index
 		end
+		#if return_odds == false
+			#index.odd?
+			#puts index
+			#newString << letter
+
+		# elsif return_odds == false
+		# 	index.even?
+			
+		# 	newString << letter
+
+
+			#puts index
+			#puts letter
+			  
+		
+		# elsif index.even? != return_odds
+		#newString << letter
+
+		#end
 		index +=1
+
+
+
+		
+	
 	end
-	return newString
-	#puts newString
+	puts newString
 	#puts newString2
 
 end
@@ -31,5 +58,5 @@ end
 
 
 
-puts odds_and_evens("abcdefg",true)    # => "bdf"
-puts odds_and_evens("abcdefg",false)   # => "aceg"
+odds_and_evens("abcdefg",true)    # => "bdf"
+odds_and_evens("abcdefg",false)   # => "aceg"
